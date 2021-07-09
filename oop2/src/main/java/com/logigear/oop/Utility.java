@@ -12,7 +12,7 @@ public class Utility {
 		return System.getProperty("user.dir");
 	}
 
-	public static void writeToFile(String path, String data, boolean append) {
+	public static void writeToFile(String path, String data, boolean append) {// Giữ nội dung đang tồn tại và thêm nội dung mới vào cuối file 
 		try {
 			File file = new File(Utility.getProjectPath() + path);
 			file.createNewFile();
