@@ -1,23 +1,24 @@
+//Focus on design patterns, parallelism, processing large amout of data, microservice deployment on docker 
+
 package com.logigear.oop.datatype;
 
 public class datatype {
-	
-	//ex1
-	
-	
+
+	// ex1
+
 	public static char[] turnStringToArray(String input) {
-		char[] charArray = new char[input.length()]; //char[] charArray ={ 'a', 'b', 'c', 'd', 'e' }; 
-		for( int i =0; i < input.length(); i++) {
-			charArray[i] =input.charAt(i);	//tra ve chuoi		
+		char[] charArray = new char[input.length()]; // char[] charArray ={ 'a', 'b', 'c', 'd', 'e' };
+		for (int i = 0; i < input.length(); i++) {
+			charArray[i] = input.charAt(i); // tra ve chuoi
 		}
-		System.out.print(input+ "\n");
-		for( int i =0; i < input.length(); i++) {
+		System.out.print(input + "\n");
+		for (int i = 0; i < input.length(); i++) {
 			System.out.print(charArray[i] + " ");
 		}
 		System.out.println();
 		return charArray;
 	}
-	
+
 	public static char[] reverseString(String input) {
 		char[] result = new char[input.length()];
 		for (int i = 0; i < input.length(); i++)
@@ -43,8 +44,6 @@ public class datatype {
 		System.out.println("   Output => " + input[index]);
 		return input[index];
 	}
-	
-	
 
 	/**
 	 * Check if an item is existed in an array or not
@@ -67,7 +66,6 @@ public class datatype {
 		System.out.println("   Output => " + result);
 		return result;
 	}
-	
 
 	/**
 	 * Count the repetitions of an item in an array
@@ -87,7 +85,6 @@ public class datatype {
 		System.out.println("   Output => " + result);
 		return result;
 	}
-	
 
 	/**
 	 * Sort numbers using Bubble sort
@@ -101,7 +98,7 @@ public class datatype {
 		for (int i = 0; i < input.length; i++)
 			System.out.print(input[i] + " ");
 		System.out.println();
-		
+
 		for (int i = 0; i < input.length - 1; i++)
 			for (int j = i + 1; j < input.length; j++)
 				if (input[i] > input[j]) {
@@ -116,28 +113,6 @@ public class datatype {
 		return input;
 	}
 
-	public static int[] test(int[] input) {
-		for( int i =0; i < input.length;i++) {
-			System.out.print(input[i]);
-		}
-		//System.out.println();
-		
-		for( int i =0; i < input.length-1; i++) {
-			for( int j = i +1; j < input.length; j++) {
-				if(input[i]> input[j]) {
-					input[i]= input[i]+ input[j];
-					input[j]= input[i]- input[j];
-					input[i]= input[i]- input[j];					
-				}
-			}			
-		}
-		for( int i =0; i < input.length; i++) {
-			System.out.print(input[i]);
-		}
-	//	System.out.println();
-		return input;
-	}
-	
 	/**
 	 * Print a Fibonacci Sequence with the input length
 	 * 
@@ -149,7 +124,7 @@ public class datatype {
 			fibo[0] = 0;
 			fibo[1] = 1;
 			for (int i = 2; i < len; i++)
-				fibo[i] = fibo[i - 2] + fibo[i - 1];
+				fibo[i] = fibo[i - 2] + fibo[i - 1]; // vi tri thu1 + vi tri thu2
 			System.out.println("Print a Fibonacci sequence with input lengh");
 			System.out.println("   Input => " + len);
 			System.out.print("   Output => ");
@@ -214,11 +189,55 @@ public class datatype {
 		// return sockPairs;
 		System.out.println("Pairs of socks: " + sockPairs);
 	}
-	
-	
-		
-	
-	
-	
 
+	// lower letter
+	public static void toLOWERcase(String input) {
+		for (int i = 0; i < input.length(); i++) {
+			char result = input.charAt(i);
+			if (65 <= result && result <= 90) {
+				result = (char) (result + 32);
+			}
+			System.out.print(result + " ");
+		}
+	}
+
+	
+	
+	//upper letter
+	public static String toUpperCase(String input) {
+		char[] charArray = new char[input.length()]; // tao 1 array kieu char
+		for (int i = 0; i < input.length(); i++) {
+			charArray[i] = input.charAt(i); // tra ve chuoi
+		}
+		charArray[0] = (char)(charArray[0]-32);
+		
+		for(int i =1; i < input.length(); i++ ) {
+			if(charArray[i]== ' ' && charArray[i+2] != ' ') {
+				charArray[i+1] = (char) (charArray[i+1]-32);
+			}
+		}
+		System.out.println(charArray);
+		return input;		
+	}
+	
+	//find the min odd number and max even number java
+	
+	public static void finding (int[] inputNumber) {
+		int largest = inputNumber[0];
+		int smallest = inputNumber[0];
+		for ( int i = 1; i < inputNumber.length; i++) {
+			if(inputNumber[i] %2 == 0 && inputNumber[i] > largest) {				
+					largest = inputNumber[i];
+				}			
+			if(inputNumber[i] %2 != 0 && inputNumber[i] < largest ) {				
+					smallest = inputNumber[i];				
+			}					
+		}	System.out.println(largest+ "\n "+ smallest);
+	}
+	
+	
+	
 }
+
+
+
