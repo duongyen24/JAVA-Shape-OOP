@@ -7,6 +7,7 @@ import com.logigear.oop.customGson.CustomDeserializer;
 import com.logigear.oop.customGson.CustomSerializer;
 import com.logigear.oop.customGson.TriangleDeserializer;
 import com.logigear.oop.datatype.datatype;
+import com.logigear.oop.ex2.Human;
 import com.logigear.oop.shape.Polygon;
 import com.logigear.oop.shape.Rectangle;
 import com.logigear.oop.shape.Triangle;
@@ -15,12 +16,8 @@ import com.logigear.oop.shape.Vertex;
 public class MyApp {
 
 	public static void main(String[] args) {
-		String input = "JAVA OOP";;
-		int[] inputNumber = { 1, 8, 0, 2, -2, 10 };
-		char[] input1 = { 'J', 'A', 'V', 'A', ' ', 'O', 'O', 'P' };
-		//datatype.turnStringToArray(input);
-		//datatype.reverseString(input);
-		datatype.test(inputNumber);
+		
+		Human A = new Human();
 		
 		
 		
@@ -30,15 +27,16 @@ public class MyApp {
 		
 		
 		
+//		String input = "JAVA OOP";
+//		String input1 = "this is a book";
+//		int len = 4;
+//		int[] inputNumber = { 5,1,2,8 };
+//		char[] input2 = { 'J', 'A', 'V', 'A', ' ', 'O', 'O', 'P' };
+//		//datatype.turnStringToArray(input);
+//		//datatype.reverseString(input);
+//		datatype.finding(inputNumber);
 		
-		
-		
-		
-		
-		
-		
-		
-		
+	
 //		String rectPath = "\\src\\test\\java\\files\\rect.json";
 //		
 //		Polygon rect = new Rectangle("PINK");
