@@ -229,7 +229,7 @@ public class datatype {
 			if(inputNumber[i] %2 == 0 && inputNumber[i] > largest) {				
 					largest = inputNumber[i];
 				}			
-			if(inputNumber[i] %2 != 0 && inputNumber[i] < largest ) {				
+			if(inputNumber[i] %2 != 0 && inputNumber[i] < smallest ) {				
 					smallest = inputNumber[i];				
 			}					
 		}	System.out.println(largest+ "\n "+ smallest);

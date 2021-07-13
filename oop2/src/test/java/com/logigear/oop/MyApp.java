@@ -1,12 +1,16 @@
 package com.logigear.oop;
 
 
+import java.util.ArrayList;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.logigear.oop.customGson.CustomDeserializer;
 import com.logigear.oop.customGson.CustomSerializer;
 import com.logigear.oop.customGson.TriangleDeserializer;
 import com.logigear.oop.datatype.datatype;
+import com.logigear.oop.ex2.Contact;
+import com.logigear.oop.ex2.All;
 import com.logigear.oop.ex2.Human;
 import com.logigear.oop.shape.Polygon;
 import com.logigear.oop.shape.Rectangle;
@@ -17,24 +21,29 @@ public class MyApp {
 
 	public static void main(String[] args) {
 		
-		Human A = new Human();
+	
 		
 		
 		
-		
-		
-		
-		
+//		ArrayList<Contact> contact1 = new ArrayList<Contact>(); 
+//		contact1.add(new Contact("abc",1));
+//		All A = new All("Yen",18, 17.6f, 2.3f, contact1);
+//		
+//		A.print();
+//		Listcontact test = new Listcontact(contact1);
+//		System.out.println(test.getList());
+//		  
+
 		
 		
 //		String input = "JAVA OOP";
 //		String input1 = "this is a book";
 //		int len = 4;
-//		int[] inputNumber = { 5,1,2,8 };
+	//int[] inputNumber = { 5,9,4,6,1 };
 //		char[] input2 = { 'J', 'A', 'V', 'A', ' ', 'O', 'O', 'P' };
 //		//datatype.turnStringToArray(input);
 //		//datatype.reverseString(input);
-//		datatype.finding(inputNumber);
+	//datatype.finding(inputNumber);
 		
 	
 //		String rectPath = "\\src\\test\\java\\files\\rect.json";
