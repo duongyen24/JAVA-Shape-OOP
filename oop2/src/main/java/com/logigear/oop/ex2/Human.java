@@ -1,31 +1,23 @@
 package com.logigear.oop.ex2;
 
 import java.awt.List;
+import java.util.ArrayList;
 
 public class Human {
-	public String name;
-	public int age;
-	public float weight;
-	public float height;
 	
-	public String getName() {
-		return name;
-	}
-	public int getAge() {
-		return age;
-	}
-	public float getWeight() {
-		return weight;
-	}
-	public float getHeight() {
-		return height;
+	private ArrayList<Contact> contact;
+
+	public Human(ArrayList<Contact> contact) {
+		this.contact = contact;
 	}
 	
-	public void printProfile(String name, int age) {
-		this.name = name;
-		this.age = age;
-	}
-	//public List<Contact> contacts;
+	public ArrayList<Contact> getList() {
+	       return contact;
+	   }
 	
 	
+	
+	
+	
+
 }
